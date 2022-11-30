@@ -1,0 +1,19 @@
+.heading {
+  display: block;
+  font-size: 2.8rem;
+  background-image: linear-gradient(
+    to right bottom,
+    $green-primary-light,
+    $green-primary-dark
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 0.2s ease;
+
+  &:hover {
+    text-shadow: 0.3rem 0.3rem 2rem rgba(0, 0, 0, 0.15);
+    transform: skewX(20deg) skewY(2deg) scale(1.1);
+  }
+}

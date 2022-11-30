@@ -1,0 +1,112 @@
+.comment {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  max-height: 150vh;
+  padding: 3rem;
+
+  background-image: url("../../src/vidoes/video.webm");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+
+  &-heading {
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+  }
+  &-video {
+    width: 100%;
+    height: 100%;
+  }
+  video {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+
+    object-fit: cover;
+    filter: opacity(0.2);
+  }
+
+  &-profile-container {
+    background-color: rgba($color-bg-white, 0.6);
+    box-shadow: 0.3rem 0.5rem 2rem rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 40vh;
+    margin: 5rem;
+    padding: 2rem;
+    transform: skewX(-15deg);
+
+    .comment-profile-contents {
+      width: 100%;
+      height: 20rem;
+      transform: skewX(15deg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 2rem;
+
+      .profile-image {
+        width: 15rem;
+        height: 15rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 10rem;
+        position: relative;
+        overflow: hidden;
+
+        .profile-heading {
+          position: absolute;
+
+          z-index: 100;
+          text-align: center;
+          color: $color-bg-white;
+          transform: translateY(6rem);
+          opacity: 0;
+          transition: all 0.5s ease;
+
+          span {
+            display: block;
+            font-size: 2rem;
+          }
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transform: scale(1.6);
+          transition: all 0.2s ease;
+        }
+      }
+      .profile-texts {
+        margin-left: 3rem;
+        width: 70%;
+        h2 {
+          font-size: 2rem;
+          margin-bottom: 1rem;
+          color: $color-bg-grey-2;
+        }
+        p {
+          font-size: 1.5rem;
+          color: $color-bg-grey-3;
+        }
+      }
+    }
+
+    &:hover .profile-image img {
+      transform: scale(1);
+      filter: blur(1.2px) brightness(0.7);
+    }
+    &:hover .profile-image .profile-heading {
+      transform: translateY(0rem);
+      opacity: 1;
+    }
+  }
+}

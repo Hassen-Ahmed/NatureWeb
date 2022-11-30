@@ -1,0 +1,14 @@
+{
+  "name": "mynatours",
+  "version": "1.0.0",
+  "description": "student version",
+  "main": "script.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Hassen",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.3"
+  }
+}

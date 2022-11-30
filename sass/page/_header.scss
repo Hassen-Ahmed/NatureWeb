@@ -1,0 +1,52 @@
+.header {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($green-primary-light, 0.8),
+      rgba($green-primary-dark, 0.8)
+    ),
+    url("../../src/img/hero.jpg");
+  background-position: top;
+  background-size: cover;
+
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+  padding-bottom: 20rem;
+
+  position: relative;
+
+  img {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+    width: 6rem;
+  }
+
+  &-heading-contianer {
+    color: white;
+    text-align: center;
+    h1 {
+      font-size: 6rem;
+      font-weight: 500;
+      letter-spacing: 3rem;
+      margin: 1rem;
+
+      animation-name: h1Anim;
+      animation-duration: 1s;
+      animation-timing-function: ease;
+    }
+    h2 {
+      font-size: 2.3rem;
+      font-weight: 500;
+      letter-spacing: 1rem;
+
+      animation-name: h2Anim;
+      animation-duration: 1s;
+      animation-timing-function: ease;
+    }
+  }
+}
